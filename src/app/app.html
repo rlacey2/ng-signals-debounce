@@ -1,0 +1,53 @@
+<div class="d-flex flex-column justify-content-center w-100">
+
+  <div class="h3 d-flex justify-content-center">Signals Debounce</div>
+
+  <div class="d-flex flex-row justify-content-center">
+
+    <div class="d-flex flex-column flex-warning px-2 mx-2 bg-warning">
+
+      <div>
+        1 <input [value]="searchQuery()" (input)="onSearchInput($event)" />
+
+        <button (click)="clearFilterStatus()" class="ms-1 btn btn-sm btn2026 btn-outline-secondary">x</button>
+      </div>
+
+      <div class="d-flex flex-column">
+        Filtering on 1
+        @for ( E of dataSourceFiltered(); track $index; let index = $index) {
+
+        <div>
+          {{E.name}} <br>
+        </div>
+        }
+
+      </div>
+
+    </div>
+
+ 
+    <div class="d-flex flex-column flex-warning px-2 mx-2 bg-info">
+
+      <div>
+        2 <input [value]="searchQuery2()" (input)="onSearchInput2($event)" />
+        <button (click)="clearFilterStatus2()" class="ms-1 btn btn-sm btn2026 btn-outline-secondary">x</button>
+
+      </div>
+
+      <div class="d-flex flex-column">
+        Filtering on 2
+        @for ( E of dataSourceFiltered2(); track $index; let index = $index) {
+
+        <div>
+          {{E.name}} <br>
+        </div>
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
